@@ -1,6 +1,9 @@
 let express = require('express');
+let cors = require('cors');
 let app = express();
 let port = 3000;
+
+app.use(cors());
 
 app.get('/ping', (req, res) => {
     res.send({
